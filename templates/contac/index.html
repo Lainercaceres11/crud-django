@@ -1,0 +1,26 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %}Contactos{% endblock  %}
+
+{% block 'content' %}
+<h2>Contactos</h2>
+<form class="search" action='{% url 'contac' %}' method="GET">
+    <input type="text" name="search" placeholder="Buscar contacto" class="searchInput">
+    <input type="submit" value="Buscar" class="search_buscar">
+</form>
+{% include 'layout/partials/busqueda.html' %}
+<span class="aux-btn"><a href="{% url 'contac' %}">Ver todos</a> <a href="{% url 'create' %}">Añadir</a></span>
+<ul class="list">
+    {% for item in contac  %}
+    <li>{{item.name}} 
+        <div class="btn">
+            <span><a href="{% url 'view' id=item.id %}" class="btn btn-ver">Ver</a></span>
+            <span><a href="{% url 'edit' id=item.id %}" class="btn btn-editar">Editar</a></span>
+            <span><a href="{% url 'delete' id=item.id %}" class="btn btn-borrar">Borrar</a></span>
+        </div>
+     
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock  %}

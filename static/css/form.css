@@ -1,0 +1,32 @@
+
+input{
+    outline: none;
+    box-shadow: 0;
+    border: 2px solid aqua;
+    padding: 5px;
+    width: 100%;
+}
+
+.btn-submit{
+    width: 85%;
+
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.aux-btn-form{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 11px;
+}
+
+.aux-btn-form a{
+    padding: 10px;
+    text-decoration: none;
+}
